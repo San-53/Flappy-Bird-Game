@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+	height: 100vh;
+	width: 100vw;
+	background: url('images/background-img.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bird {
+	height: 100px;
+	width: 130px;
+	position: fixed;
+	top: 40vh;
+	left: 30vw;
+	z-index: 100;
+}
+.pipe_sprite {
+	position: fixed;
+	top: 40vh;
+	left: 100vw;
+	height: 70vh;
+	width: 6vw;
+	background:radial-gradient(lightgreen 50%, green);
+	border: 5px solid black;
+}
+.message {
+	position: absolute;
+	z-index: 10;
+	color: rgb(33, 32, 35);
+	top: 30%;
+	left: 50%;
+	font-size: 2em;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+.messageStyle{
+	/* background: b5c6e0; */
+    background: hsla(179, 67%, 66%, 1);
+
+background: linear-gradient(90deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+background: -moz-linear-gradient(90deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+background: -webkit-linear-gradient(90deg, hsla(179, 67%, 66%, 1) 0%, hsla(238, 74%, 61%, 1) 100%);
+
+filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6FE3E1", endColorstr="#5257E5", GradientType=1 );
+	padding: 30px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 5%;
+    opacity: 1;
+}
+.score {
+	position: fixed;
+	z-index: 10;
+	height: 5vh;
+	font-size: 5vh;
+	font-weight: 100;
+    border: none;
+	color: rgb(0, 0, 0);
+	-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+	top: 0;
+	left: 0;
+	margin: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.score_val {
+	/* color: ede342; */
+    color: rgb(248, 248, 15);
+	font-weight: bold;
+    border: none;
+}
+@media only screen and (max-width: 1080px) {
+    .message{
+		font-size: 50px;
+		top: 50%;
+		white-space: nowrap;
+	}
+	.score{
+		font-size: 3vh;
+	}
+	.bird{
+		width: 120px;
+		height: 90px;
+	}
+	.pipe_sprite{
+		width: 14vw;
+	}
+}
